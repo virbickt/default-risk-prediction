@@ -20,3 +20,5 @@ The Home Credit Default Risk dataset consists of seven related tables of data:
 |`POS_CASH_BALANCE.csv`|monthly data about previous point of sale or cash loans from the previous loan data. Each row is one month of a previous point of sale or cash loan, and a single previous loan can have many rows. This is linked backed to the previous loan data by `SK_ID_PREV` (not unique in this dataframe).|
 |`credit_card_balance.csv`|monthly data about previous credit cards loans from the previous loan data. Each row is one month of a credit card balance, and a single credit card can have many rows. This is linked backed to the previous loan data by `SK_ID_PREV` (not unique in this dataframe).|
 |`installments_payment.csv`|payment history for previous loans at Home Credit. There is one row for every made payment and one row for every missed payment. This is linked backed to the previous loan data by `SK_ID_PREV` (not unique in this dataframe).|
+
+![tables_graph](images/tables_graph.png)
