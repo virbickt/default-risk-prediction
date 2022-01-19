@@ -10,6 +10,8 @@ The data comprises socio-economic indicators for the clients, loan specific fina
 
 The metric for this competition is *Receiver Operating Characteristic Area Under the Curve* (ROC AUC) with predictions made in terms of the probability of defaulting on the loan.
 
+## Data description
+
 The Home Credit Default Risk dataset consists of seven related tables of data:
 |File name|Description|
 |--|--|
