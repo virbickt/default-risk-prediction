@@ -22,3 +22,9 @@ The Home Credit Default Risk dataset consists of seven related tables of data:
 |`installments_payment.csv`|payment history for previous loans at Home Credit. There is one row for every made payment and one row for every missed payment. This is linked backed to the previous loan data by `SK_ID_PREV` (not unique in this dataframe).|
 
 ![tables_graph](images/tables_graph.png)
+
+## Aftermath
+
+- The project has got us actually concerned about computational resources and the size of data for the first time. Our initial attempts of merging dataframes would result in kernel restarting because of using up all the RAM. By looking for a solution we have discovered Dask, which would only load a batch of data at the time. However, while we managed to merge to dataframes, attempts to save the resulting dataframes on either cloud or locally would result in system running out of RAM as well. We have managed to get over this problem by using a temporary dataframe (with unique ID values) which we would create for the sole purpose of storing only the relevant pieces of information that we would eventually add to the main dataframe. The problem that has must have been responsible was the fact that other tables had multiple entries inside the column that would be used as a joining column (as a single applicant could have had more than a single loan).
+
+- The model that gave the best results (LGBM) has also turned out to be the model that was the quickest. It would have been an additional burden with respect to task such as search for the best hyperparameters or features to be selected if it was not the case.
